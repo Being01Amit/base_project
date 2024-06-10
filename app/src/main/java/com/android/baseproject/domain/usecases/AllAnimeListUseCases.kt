@@ -5,7 +5,7 @@ import com.android.baseproject.domain.repository.AnimeListRepository
 import javax.inject.Inject
 
 class AllAnimeListUseCases @Inject constructor(private val repository: AnimeListRepository) {
-    suspend fun execute() : List<AnimeListModel> {
+    suspend fun execute() : AnimeListModel {
         return repository.getAllAnimeList()
     }
 }

@@ -13,8 +13,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AnimeDataViewModel @Inject constructor(private val userCases: AllAnimeListUseCases) : ViewModel() {
-    val _allAnimeList = MutableLiveData<List<AnimeListModel>>()
-    val allAnimeList: MutableLiveData<List<AnimeListModel>>
+    val _allAnimeList = MutableLiveData<AnimeListModel>()
+    val allAnimeList: MutableLiveData<AnimeListModel>
         get() = _allAnimeList
 
     init {

@@ -5,7 +5,7 @@ import com.android.baseproject.domain.model.AnimeListModel
 import javax.inject.Inject
 
 class GetAnimeListSource @Inject constructor(private val apiService: APIService) {
-    suspend fun getAllAnimeList(): List<AnimeListModel> {
+    suspend fun getAllAnimeList(): AnimeListModel {
         return apiService.getAllAnime()
     }
 }

@@ -7,7 +7,7 @@ import javax.inject.Inject
 
 class AnimeListRepositoryImp @Inject constructor(private val remoteDataSource: GetAnimeListSource) :
     AnimeListRepository {
-    override suspend fun getAllAnimeList(): List<AnimeListModel> {
+    override suspend fun getAllAnimeList(): AnimeListModel {
         return remoteDataSource.getAllAnimeList()
     }
 }
