@@ -12,7 +12,7 @@ sealed interface DataError : Error {
         NO_INTERNET_CONNECTION,
         JSON_PARSING_ERROR
     }
-
-    enum class LocalError : DataError
-
+    enum class LocalError : DataError {
+        NULL_POINTER_EXCEPTION
+    }
 }

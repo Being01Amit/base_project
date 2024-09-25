@@ -4,12 +4,12 @@ import com.google.gson.annotations.SerializedName
 
 data class AnimeListModel(
     @SerializedName("data")
-    var `data`: List<Data>,
+    var `data`: List<AnimeDataModel>,
     @SerializedName("meta")
     var meta: Meta
 )
 
-data class Data(
+data class AnimeDataModel(
     @SerializedName("alternativeTitles")
     var alternativeTitles: List<String>,
     @SerializedName("episodes")

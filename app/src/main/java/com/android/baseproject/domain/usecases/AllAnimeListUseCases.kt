@@ -5,13 +5,13 @@ import com.android.baseproject.domain.ResultWrapper
 import com.android.baseproject.domain.model.AnimeListModel
 import com.android.baseproject.domain.repository.AnimeListRepository
 
-class AllAnimeListUseCases(private val repository: AnimeListRepository) {
-    suspend fun execute(): ResultWrapper<AnimeListModel, DataError.NetworkError> {
+class AllAnimeListUseCases(
+    private val repository: AnimeListRepository
+) {
+    suspend fun animeList(page: Int): ResultWrapper<AnimeListModel, DataError> {
         val queryParams = mapOf(
-            "page" to "1",
+            "page" to page.toString(),
             "size" to "10",
-            "search" to "Fullmetal",
-            "genres" to "Fantasy,Drama",
             "sortBy" to "ranking",
             "sortOrder" to "asc"
         )

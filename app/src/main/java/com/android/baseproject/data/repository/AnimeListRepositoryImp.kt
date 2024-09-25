@@ -14,8 +14,8 @@ import java.io.IOException
 import java.net.ConnectException
 import java.net.SocketTimeoutException
 
-class AnimeListRepositoryImp (private val apiService: APIService) : AnimeListRepository {
-    override suspend fun getAllAnimeList(queryMap: Map<String, String>): ResultWrapper<AnimeListModel, DataError.NetworkError> {
+class AnimeListRepositoryImp(private val apiService: APIService) : AnimeListRepository {
+    override suspend fun getAllAnimeList(queryMap: Map<String, String>): ResultWrapper<AnimeListModel, DataError> {
         return try {
             withContext(Dispatchers.IO) {
                 val response = apiService.getAllAnime(queryMap)
@@ -39,6 +39,8 @@ class AnimeListRepositoryImp (private val apiService: APIService) : AnimeListRep
             ResultWrapper.Error(DataError.NetworkError.JSON_PARSING_ERROR)
         } catch (e: IOException) {
             ResultWrapper.Error(DataError.NetworkError.NO_INTERNET_CONNECTION)
+        } catch (e: NullPointerException) {
+            ResultWrapper.Error(DataError.LocalError.NULL_POINTER_EXCEPTION)
         }
     }
 }

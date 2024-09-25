@@ -1,4 +1,4 @@
-package com.android.baseproject.ui.viewmodel
+package com.android.baseproject.ui.views.animelist
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -16,16 +16,12 @@ import javax.inject.Inject
 @HiltViewModel
 class AnimeDataViewModel @Inject constructor(private val userCases: AllAnimeListUseCases) : ViewModel() {
     private val _animeListData =
-        MutableStateFlow<ResultWrapper<AnimeListModel, DataError.NetworkError>>(ResultWrapper.Loading())
-    val animeListModel: StateFlow<ResultWrapper<AnimeListModel, DataError.NetworkError>> = _animeListData
+        MutableStateFlow<ResultWrapper<AnimeListModel, DataError>>(ResultWrapper.Loading())
+    val animeListModel: StateFlow<ResultWrapper<AnimeListModel, DataError>> = _animeListData
 
-    init {
-        getAllAnimeList()
-    }
-
-    fun getAllAnimeList() {
+     fun getAllAnimeList(page : Int) {
         viewModelScope.launch(Dispatchers.Main) {
-           val response = userCases.execute()
+           val response = userCases.animeList(page)
             _animeListData.value = response
         }
     }

@@ -5,5 +5,5 @@ import com.android.baseproject.domain.ResultWrapper
 import com.android.baseproject.domain.model.AnimeListModel
 
 interface AnimeListRepository {
-    suspend fun getAllAnimeList(queryMap: Map<String, String>) : ResultWrapper<AnimeListModel, DataError.NetworkError>
+    suspend fun getAllAnimeList(queryMap: Map<String, String>): ResultWrapper<AnimeListModel, DataError>
 }
