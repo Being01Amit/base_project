@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "245447431075",
+    "firebase_url": "https://classwork-c147a-default-rtdb.firebaseio.com",
+    "project_id": "classwork-c147a",
+    "storage_bucket": "classwork-c147a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245447431075:android:fbba75afbb463859d04016",
+        "android_client_info": {
+          "package_name": "com.android.roompractice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245447431075-onqqua25nl2aq2e97b24rt69nrr9gi7r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZNO7CTmg3KIccv50-QZ-uwujHyMPw-rQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245447431075-mmjpgdn51o90o02cc2gicbh2kkhntdq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245447431075:android:9fe59544813b2eb2d04016",
+        "android_client_info": {
+          "package_name": "com.notes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245447431075-onqqua25nl2aq2e97b24rt69nrr9gi7r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZNO7CTmg3KIccv50-QZ-uwujHyMPw-rQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245447431075-mmjpgdn51o90o02cc2gicbh2kkhntdq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
