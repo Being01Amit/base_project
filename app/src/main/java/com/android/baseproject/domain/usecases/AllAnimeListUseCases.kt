@@ -6,7 +6,7 @@ import javax.inject.Inject
 class AllAnimeListUseCases @Inject constructor(private val repository: AnimeListRepository){
     suspend fun execute(endPoint: String) : Result<Unit, Error> {
         return try {
-            val response = repository.getAllAnimeList(endPoint)
+            val response = repository.getAllAnimeList(endPoint){}
             Result.Success(response)
         } catch (e: Exception) {
             e.printStackTrace()
