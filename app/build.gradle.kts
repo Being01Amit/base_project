@@ -1,19 +1,22 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.compose.compiler)
     id("kotlin-parcelize")
     id ("kotlin-kapt")
     id ("com.google.dagger.hilt.android")
+    id ("com.google.devtools.ksp")
+
 }
 
 android {
     namespace = "com.android.baseproject"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.android.baseproject"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -87,7 +90,7 @@ dependencies {
 
     //Dagger - Hilt
     implementation (libs.hilt.android)
-    kapt (libs.hilt.android.compiler)
+    ksp (libs.hilt.android.compiler)
     implementation (libs.androidx.lifecycle.viewmodel.savedstate)
     implementation (libs.androidx.hilt.navigation.compose)
 }
